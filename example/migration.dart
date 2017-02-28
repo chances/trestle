@@ -2,7 +2,7 @@ import 'package:trestle/gateway.dart';
 import 'session.dart';
 import 'dart:async';
 
-final driver = new SqliteDriver(':memory:');
+final driver = new InMemoryDriver();
 
 final migrations = [
   CreateUsersTableMigration,

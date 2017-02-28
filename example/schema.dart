@@ -1,7 +1,7 @@
 import 'package:trestle/gateway.dart';
 import 'session.dart';
 
-final SqliteDriver driver = new SqliteDriver(':memory:');
+final InMemoryDriver driver = new InMemoryDriver();
 
 main() => session(driver, (Gateway gateway) async {
   await gateway.create('users', (Schema schema) {

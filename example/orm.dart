@@ -2,7 +2,7 @@ import 'package:trestle/trestle.dart';
 import 'package:trestle/gateway.dart';
 import 'session.dart';
 
-final driver = new SqliteDriver(':memory:');
+final driver = new InMemoryDriver();
 
 main() => session(driver, (Gateway gateway) async {
   final repo = new Repository<User>(gateway);
